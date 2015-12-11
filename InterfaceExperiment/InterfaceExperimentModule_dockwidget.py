@@ -102,7 +102,7 @@ class InterfaceExperimentDockWidget(QtGui.QDockWidget, FORM_CLASS):
             self.selectLayerCombo.addItems(layer_names)
             self.setSelectedLayer()
 
-### Interface Specificatins ###
+### Interface Specifications ###
 
     # selecting a file for saving
     def selectFile(self):
