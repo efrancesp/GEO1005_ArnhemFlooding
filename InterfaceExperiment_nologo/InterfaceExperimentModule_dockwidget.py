@@ -36,10 +36,9 @@ from . import utility_functions as uf
 
 FORM_CLASS, _ = uic.loadUiType(os.path.join(
     os.path.dirname(__file__), 'InterfaceExperimentModule_dockwidget_base.ui'))
-#from InterfaceExperimentModule_dockwidget_base import Ui_InterfaceExperimentBase
+
 
 class InterfaceExperimentDockWidget(QtGui.QDockWidget, FORM_CLASS):
-#class InterfaceExperimentDockWidget(QtGui.QDockWidget, Ui_InterfaceExperimentBase):
 
     closingPlugin = QtCore.pyqtSignal()
 
@@ -61,7 +60,7 @@ class InterfaceExperimentDockWidget(QtGui.QDockWidget, FORM_CLASS):
         self.iface.projectRead.connect(self.updateLayers)
         self.iface.newProjectCreated.connect(self.updateLayers)
 
-       # analysis
+        # analysis
         self.graph = QgsGraph()
         self.tied_points = []
         self.setNetworkButton.clicked.connect(self.buildNetwork)
@@ -92,7 +91,7 @@ class InterfaceExperimentDockWidget(QtGui.QDockWidget, FORM_CLASS):
     # General Functions (these seem like we need them, not sure though.
     def openScenario(self,filename=""):
         scenario_open = False
-        scenario_file = os.path.join('/Tool Development','basemap.qgs')
+        scenario_file = os.path.join('/Users/Fanny/GitHub/GEO1005_ArnhemFlooding','basemap.qgs') ## Ad actual directory
         # check if file exists
         if os.path.isfile(scenario_file):
             self.iface.addProject(scenario_file)
@@ -110,25 +109,24 @@ class InterfaceExperimentDockWidget(QtGui.QDockWidget, FORM_CLASS):
         self.iface.actionSaveProject()
 
 
-### Interface Specificatins ###
+### Interface Specifications ###
 
-    # route functions
     def getNetwork(selfs):
-        roads_layer = uf.getLegendLayerByName(self.iface, "reduced_roads")
-        if roads_layer:
-            # see if there is an obstacles layer to subtract roads from the network
-            obstacles_layer = uf.getgetLegenLayerByName(self.iface, "Obstacles")
-            if obstacles_layer:
-                # retreive roads outside obstacles (inside = False)
-                features = uf.getFeaturesByIntersection(roads_layer, obstacles_layer, False)
-                # add these roads to a new temporary layer
-                road_network = uf.createTempLayer("temp_network", "LINESTRING", roads_layer.crs().postgisSrid(),[],[])
-                road_network.dataProvider().addFeatures(features)
+            roads_layer = uf.getLegendLayerByName(self.iface, "reduced_roads")
+            if roads_layer:
+                # see if there is an obstacles layer to subtract roads from the network
+                obstacles_layer = uf.getgetLegenLayerByName(self.iface, "Obstacles")
+                if obstacles_layer:
+                    # retreive roads outside obstacles (inside = False)
+                    features = uf.getFeaturesByIntersection(roads_layer, obstacles_layer, False)
+                    # add these roads to a new temporary layer
+                    road_network = uf.createTempLayer("temp_network", "LINESTRING", roads_layer.crs().postgisSrid(),[],[])
+                    road_network.dataProvider().addFeatures(features)
+                else:
+                    road_network = roads_layer
+                return road_network
             else:
-                road_network = roads_layer
-            return road_network
-        else:
-            return
+                return
 
     def buildNetwork(self):
         self.network_layer = self.getNetwork()
@@ -173,6 +171,7 @@ class InterfaceExperimentDockWidget(QtGui.QDockWidget, FORM_CLASS):
             layer.setCacheImage(None)
         else:
             self.canvas.refresh()
+
 
     # selecting a file for saving
     def selectFile(self):
