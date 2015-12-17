@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
  <class>InterfaceExperimentDockWidgetBase</class>
@@ -268,3 +269,274 @@
  </resources>
  <connections/>
 </ui>
+=======
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>InterfaceExperimentDockWidgetBase</class>
+ <widget class="QDockWidget" name="InterfaceExperimentDockWidgetBase">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>384</width>
+    <height>828</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>InterfaceExperiment</string>
+  </property>
+  <widget class="QWidget" name="dockWidgetContents">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="1" column="0">
+     <widget class="QLabel" name="Description">
+      <property name="text">
+       <string>Scenario: Heavy rains follow a storm that has just broken out in your city. Reports of flooding are circulating. FloodSafe is a crowdsource platform map that quickly and easily helps you determine your situation. You will have all the information you need to make evacuation decisions based on changing water levels, current weather, road conditions, user-input data, facility locations, and predictive technology.</string>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="11" column="0">
+     <widget class="QLabel" name="reportLabel">
+      <property name="text">
+       <string>Your file has been saved.</string>
+      </property>
+     </widget>
+    </item>
+    <item row="10" column="0">
+     <layout class="QGridLayout" name="gridLayout_2">
+      <item row="3" column="1">
+       <widget class="QComboBox" name="poiTypeBox">
+        <item>
+         <property name="text">
+          <string>Show All</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="poiLabel">
+        <property name="text">
+         <string>Create your own POI's</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QPushButton" name="poiButton">
+        <property name="text">
+         <string>Add Point of Interest</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="0">
+       <widget class="QLabel" name="poiTypeLabel">
+        <property name="text">
+         <string>Display POI type</string>
+        </property>
+       </widget>
+      </item>
+      <item row="7" column="0">
+       <widget class="QLabel" name="saveMapLabel1">
+        <property name="text">
+         <string>Save Image to File</string>
+        </property>
+       </widget>
+      </item>
+      <item row="6" column="0">
+       <widget class="QLabel" name="saveMapLabel0">
+        <property name="text">
+         <string>Choose File Path</string>
+        </property>
+       </widget>
+      </item>
+      <item row="6" column="1">
+       <widget class="QLineEdit" name="saveMapPathEdit"/>
+      </item>
+      <item row="7" column="1">
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <property name="spacing">
+         <number>0</number>
+        </property>
+        <property name="sizeConstraint">
+         <enum>QLayout::SetDefaultConstraint</enum>
+        </property>
+        <item>
+         <widget class="QPushButton" name="saveMapPathButton">
+          <property name="maximumSize">
+           <size>
+            <width>16777173</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>...</string>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>5</width>
+            <height>20</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="saveMapButton">
+          <property name="text">
+           <string>Save Map</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+    <item row="3" column="0">
+     <layout class="QGridLayout" name="gridLayout_3">
+      <item row="2" column="0">
+       <widget class="QLabel" name="routeLabel">
+        <property name="text">
+         <string>Get Escape Route</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0">
+       <widget class="QLabel" name="positionLabel">
+        <property name="text">
+         <string>Find My Position</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QPushButton" name="setNetworkButton">
+        <property name="text">
+         <string>Calculate New Network</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="destinationLabel">
+        <property name="text">
+         <string>Select Destination</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="1">
+       <widget class="QPushButton" name="shortestRouteButton">
+        <property name="text">
+         <string>Get Shortest Route</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QComboBox" name="destinationBox">
+        <item>
+         <property name="text">
+          <string>Apeldoorn</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Ede</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Doetinchem</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Nijmegen</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QPushButton" name="positionButton">
+        <property name="text">
+         <string>Get Location</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="1">
+       <widget class="QPushButton" name="clearRouteButton">
+        <property name="text">
+         <string>Clear Route</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="0">
+       <widget class="QLabel" name="shortestRouteLabel">
+        <property name="text">
+         <string>Shortest Route Calculated</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="6" column="0">
+     <spacer name="verticalSpacer">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>20</width>
+        <height>40</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item row="0" column="0">
+     <widget class="QLabel" name="label">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>82</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">image: url(:/icons/title.png);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="12" column="0">
+     <spacer name="verticalSpacer_2">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>20</width>
+        <height>40</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item row="2" column="0">
+     <widget class="Line" name="line">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+    </item>
+    <item row="7" column="0">
+     <widget class="Line" name="line_2">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources>
+  <include location="resources.qrc"/>
+ </resources>
+ <connections/>
+</ui>
+>>>>>>> Stashed changes

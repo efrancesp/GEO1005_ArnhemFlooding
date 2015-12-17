@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 <RCC>
   <qresource prefix="/">
     <file>icons/icon.png</file>
@@ -5,3 +6,13 @@
     <file>icons/title.png</file>
   </qresource>
 </RCC>
+=======
+<RCC>
+  <qresource prefix="/">
+    <file>icons/icon.png</file>
+    <file>icons/logo.png</file>
+    <file>icons/title.png</file>
+    <file>icons/gif_weather.gif</file>
+  </qresource>
+</RCC>
+>>>>>>> Stashed changes
